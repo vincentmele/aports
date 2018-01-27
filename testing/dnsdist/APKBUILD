@@ -33,6 +33,7 @@ build() {
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man \
+		--enable-unit-tests \
 		--enable-dnscrypt \
 		--enable-libsodium \
 		--enable-re2 \
@@ -45,7 +46,7 @@ build() {
 
 check(){
 	cd "$builddir"
-	make check-local
+	make check
 }
 
 package() {
